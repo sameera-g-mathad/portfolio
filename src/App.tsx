@@ -1,12 +1,13 @@
-import './App.css'
+import { Cover } from '@/sections'
 
-function App() {
-
+// the start component of the react
+// app.
+export default function App() {
   return (
-    <>
-      <span>Sameer</span>
-    </>
+    <div>
+      <Cover />
+    </div>
   )
 }
 
-export default App
+

@@ -22,7 +22,20 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* 
+    Paths - Allows to define custom module import 
+    aliases so you can import files using shorter 
+    or cleaner paths.
+    */
+    "paths": {
+      "@/*": ["./src/*"],
+      "base": ["."],
+      "interfaces": ["./src/interfaces"],
+      "reusables": ["./src/reusables"],
+      "sections": ["./src/sections"]
+    }
   },
   "include": ["src"]
 }
