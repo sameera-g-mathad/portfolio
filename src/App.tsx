@@ -1,3 +1,4 @@
+import "./App.css"
 import { Cover } from '@/sections'
 
 // the start component of the react
