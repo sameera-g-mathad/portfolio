@@ -1,12 +1,12 @@
 import './App.css'
-import { About, Header, Hero } from '@/components'
+import { About, Experience, Header, Hero } from '@/sections'
 function App() {
   return (
     <div className='grid'>
       <Header />
       <Hero />
       <About />
-      <div id="experience" className='w-full h-screen'>experience</div>
+      <Experience />
       <div id="projects" className='w-full h-screen'>projects</div>
       <div id="skills" className='w-full h-screen'>skills</div>
       <div id="contact" className='w-full h-screen'>contact</div>

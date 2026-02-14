@@ -27,8 +27,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "base": ["."],
-      "components": ["./src/components/*"],
+      "components": ["src/components/*"],
       "svgs": ["./src/svgs/*"],
+      "sections": ["./src/sections/*"],
       "interface": ["./src/interface.ts"]
     }
   },

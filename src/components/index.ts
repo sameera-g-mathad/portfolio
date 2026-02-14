@@ -1,4 +1,3 @@
-// exports are in lexographical order
-export * from './About';
-export * from './Header';
-export * from './Hero';
+export * from './Content';
+export * from './ExperienceCard';
+export * from './SectionHeading';

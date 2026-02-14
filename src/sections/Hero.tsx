@@ -1,5 +1,5 @@
 import React from "react";
-import { Content } from "./Content";
+import { Content } from "@/components";
 import { GithubSvg, LinkedInSvg } from "@/svgs";
 
 export const Hero: React.FC = () => {

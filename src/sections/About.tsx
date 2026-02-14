@@ -1,6 +1,5 @@
 import React from "react";
-import { Content } from "./Content";
-import { SectionHeading } from "./SectionHeading";
+import { Content, SectionHeading } from "@/components";
 
 export const About: React.FC = () => {
     return <Content>
