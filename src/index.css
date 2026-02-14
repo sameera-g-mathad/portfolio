@@ -1,1 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  /* Colors */
+  --color-background: hsl(225 25% 6%);
+  --color-foreground: hsl(210 20% 92%);
+  --color-card: hsl(225 22% 9%);
+  --color-card-foreground: hsl(210 20% 92%);
+  --color-popover: hsl(225 22% 9%);
+  --color-popover-foreground: hsl(210 20% 92%);
+  --color-primary: hsl(165 80% 48%);
+  --color-primary-foreground: hsl(225 25% 6%);
+  --color-secondary: hsl(230 20% 14%);
+  --color-secondary-foreground: hsl(210 20% 82%);
+  --color-muted: hsl(225 18% 12%);
+  --color-muted-foreground: hsl(220 15% 52%);
+  --color-accent: hsl(270 60% 65%);
+  --color-accent-foreground: hsl(225 25% 6%);
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(210 40% 98%);
+  --color-border: hsl(225 18% 16%);
+  --color-input: hsl(225 18% 16%);
+  --color-ring: hsl(165 80% 48%);
+  --color-glow: hsl(165 80% 48%);
+  --color-glow-secondary: hsl(270 60% 65%);
+
+  /* Border radius */
+  --radius: 0.5rem;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Font families */
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out both;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out both;
+  --animate-scale-in: scale-in 0.5s ease-out both;
+  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
+}
+
+/* Keyframes */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Base styles */
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: hsl(160 60% 50% / 0.25);
+}
+
+/* Custom Utilities */
+@utility text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-accent)
+  );
+}
+
+@utility section-container {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@utility mono {
+  font-family: var(--font-mono);
+}
+
+@utility animate-fade-up {
+  animation: var(--animate-fade-up);
+}
+
+@utility animate-fade-in {
+  animation: var(--animate-fade-in);
+}
+
+@utility animate-slide-in-left {
+  animation: var(--animate-slide-in-left);
+}
+
+@utility animate-slide-in-right {
+  animation: var(--animate-slide-in-right);
+}
+
+@utility animate-scale-in {
+  animation: var(--animate-scale-in);
+}
+
+@utility animate-glow-pulse {
+  animation: var(--animate-glow-pulse);
+}
+
+@utility animate-accordion-down {
+  animation: var(--animate-accordion-down);
+}
+
+@utility animate-accordion-up {
+  animation: var(--animate-accordion-up);
+}
+
+@utility stagger-1 {
+  animation-delay: 0.1s;
+}
+@utility stagger-2 {
+  animation-delay: 0.2s;
+}
+@utility stagger-3 {
+  animation-delay: 0.3s;
+}
+@utility stagger-4 {
+  animation-delay: 0.4s;
+}
+@utility stagger-5 {
+  animation-delay: 0.5s;
+}
+@utility stagger-6 {
+  animation-delay: 0.6s;
+}
+
+@utility hover-glow {
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow:
+      0 0 20px color-mix(in srgb, var(--color-glow) 15%, transparent),
+      0 0 40px color-mix(in srgb, var(--color-glow) 5%, transparent);
+  }
+}
+
+@utility card-shine {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-glow) 8%, transparent),
+      transparent 60%
+    );
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
