@@ -1,6 +1,12 @@
 import React, { useMemo, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+/**
+ * The Header for the entire website.
+ * This will be fixed on top of the screen
+ * and handles both desktop and mobile views.
+ * @returns React.JSX
+ */
 export const Header: React.FC = () => {
     const navLinks = [
         { label: "About", href: "about", num: "01" },
@@ -15,9 +21,12 @@ export const Header: React.FC = () => {
         return navLinks.map((el, i) =>
             <ul key={i}>
                 <a className="flex gap-1.5 cursor-pointer font-mono text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                    // this prevents the need of of
+                    // `href`, as we can use js to handle 
+                    // links and href wont be part of urls.
                     onClick={(e) => {
                         e.preventDefault();
-                        document.getElementById(el.href)?.scrollIntoView({ behavior: 'smooth' })
+                        document.getElementById(el.href)?.scrollIntoView({ behavior: 'smooth', block: "start" })
                     }
                     }
                 >
@@ -28,35 +37,37 @@ export const Header: React.FC = () => {
         )
     }, [])
 
-    return <div className="fixed w-full">
-        <div className="w-full h-16 z-50 backdrop-blur-md flex items-center justify-between border-b border-border">
-            <a className="font-mono text-gradient cursor-pointer"
-                onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })
-                }}
-            >SM</a>
-            <nav className="gap-5 lg:flex hidden">
-                {
-                    memoisedLinks
-                }
-            </nav>
-            <button
-                className="md:hidden text-muted-foreground hover:text-primary transition-colors duration-300"
-                onClick={() => setOpen(!open)}
-            >
-                {open ? <X size={24} /> : <Menu size={24} />}
-            </button>
-        </div>
-        {
-            open && <div className="animate-fade-up bg-card border-b border-border lg:hidden">
-                <nav className="flex flex-col justify-between gap-2 py-4">
+    return <div className="w-full flex justify-center">
+        <div className="fixed portfolio-width z-50 backdrop-blur-lg">
+            <div className="w-full h-16 flex items-center justify-between border-b border-border">
+                <a className="font-mono text-gradient lg:text-3xl text-lg tracking-wide cursor-pointer"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+                    }}
+                >{"sg = math(ad)"}</a>
+                <nav className="gap-10 lg:flex hidden">
                     {
                         memoisedLinks
                     }
                 </nav>
+                <button
+                    className="md:hidden text-muted-foreground hover:text-primary transition-colors duration-300"
+                    onClick={() => setOpen(!open)}
+                >
+                    {open ? <X size={24} /> : <Menu size={24} />}
+                </button>
             </div>
-        }
+            {
+                open && <div className="animate-fade-up bg-card border-b border-border lg:hidden">
+                    <nav className="flex flex-col justify-between gap-2 py-4">
+                        {
+                            memoisedLinks
+                        }
+                    </nav>
+                </div>
+            }
+        </div>
     </div>;
 };
 
