@@ -28,7 +28,8 @@
       "@/*": ["./src/*"],
       "base": ["."],
       "components": ["./src/components/*"],
-      "svgs": ["./src/svgs/*"]
+      "svgs": ["./src/svgs/*"],
+      "interface": ["./src/interface.ts"]
     }
   },
   "include": ["src"]

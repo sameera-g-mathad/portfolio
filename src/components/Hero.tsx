@@ -6,7 +6,7 @@ export const Hero: React.FC = () => {
     return <Content>
         <div id="hero" className="w-full h-full flex justify-between">
             <div className="flex flex-col justify-center lg:py-15 py-4 lg:gap-10 gap-4 flex-2">
-                <span className="font-mono text-accent tracking-wider animate-fade-up lg:text-lg text-sm">Hi, I am</span>
+                <span className="text-accent tracking-wider animate-fade-up lg:text-lg text-sm">Hi, I am</span>
                 <div className="flex flex-col gap-2 ">
                     <div className="lg:text-8xl text-5xl font-bold capitalize text-gradient animate-fade-up stagger-1">sameer gururaj mathad.</div>
                     <span className="lg:text-4xl text-2xl text-forground animate-fade-up stagger-2">I build things for the web & AI.</span>
