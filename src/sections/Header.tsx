@@ -21,6 +21,11 @@ export const Header: React.FC = () => {
         e.preventDefault();
         // for scrolling there.
         const target = document.getElementById(url);
+        if (url === 'hero')
+            document.title = 'Sameer Gururaj Mathad'
+
+        else
+            document.title = url.charAt(0).toUpperCase() + url.slice(1)
 
         if (target) {
             // Scroll to the section
