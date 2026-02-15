@@ -1,10 +1,11 @@
 export interface className {
   className: string;
 }
-
 export interface badgeInterface {
   icon?: React.ReactElement;
   title: string;
+  active: boolean;
+  className?: string;
 }
 
 export interface experienceCardInterface {
@@ -20,4 +21,18 @@ export interface experienceCardInterface {
 export interface sectionHeadingInterface {
   sectionNumber: string;
   sectionHeading: string;
+}
+
+export interface carouselInterface {
+  height: string;
+  reverse: boolean;
+  slider: 'vertical' | 'horizontal';
+  width: string;
+}
+
+export interface skillSetInterface {
+  items: string[];
+  title: string;
+  reverse: boolean;
+  width: string;
 }

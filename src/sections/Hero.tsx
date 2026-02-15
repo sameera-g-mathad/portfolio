@@ -1,6 +1,7 @@
 import React from "react";
 import { Content } from "@/components";
 import { GithubSvg, LinkedInSvg } from "@/svgs";
+import { Badge } from "@/components/Badge";
 
 export const Hero: React.FC = () => {
     return <Content>
@@ -15,11 +16,11 @@ export const Hero: React.FC = () => {
                     Full-Stack Developer & AI Engineer with a Master's in Artificial Intelligence (4.0 GPA) from DePaul University.
                     I specialize in building scalable web applications and intelligent systems using the PERN/MERN stack, PyTorch, and LLMs.
                 </span>
-                <div className="animate-fade-up stagger-5 flex gap-10 items-center">
+                <div className="animate-fade-up stagger-5 flex flex-wrap lg:gap-10 gap-5 items-center">
                     <a
                         href="./Sameer_Gururaj_Mathad_Resume_AI_V7.pdf"
                         target='_blank'
-                        className="inline-flex capitalize tracking-wide items-center gap-2 border-2 border-primary! text-primary px-6 py-3 rounded font-mono hover:bg-primary/10 transition-all duration-300"
+                        className="inline-flex capitalize tracking-wide items-center gap-2 border-2 border-primary! text-primary px-6 py-2 rounded font-mono hover:bg-primary/10 transition-all duration-300"
                     >
                         resume
                     </a>
@@ -35,6 +36,7 @@ export const Hero: React.FC = () => {
                         className=" hover:-translate-y-1 transition-all duration-300 cursor-pointer">
                         <LinkedInSvg className="stroke-muted-foreground fill-none w-7 h-7" />
                     </a>
+                    <Badge title="Open to Work" active={true} />
                 </div>
             </div>
             <div className="lg:flex hidden justify-end items-center mb-25 flex-1 animate-fade-up stagger-1">

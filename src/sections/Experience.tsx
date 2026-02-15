@@ -4,7 +4,7 @@ import { Content, ExperienceCard, SectionHeading } from '@/components'
 export const Experience: React.FC = () => {
     return <Content>
         <div id='experience' className="w-full h-full">
-            <SectionHeading sectionHeading="education and experience" sectionNumber="02" />
+            <SectionHeading sectionHeading="experience" sectionNumber="02" />
 
             <div className="flex flex-col gap-5 pt-4">
                 <ExperienceCard

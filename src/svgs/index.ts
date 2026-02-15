@@ -5,4 +5,5 @@ export * from './EducationSvg';
 export * from './GithubSvg';
 export * from './LinkedInSvg';
 export * from './LocationSvg';
+export * from './PointerSvg';
 export * from './WorkSvg';
