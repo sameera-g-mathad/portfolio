@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { CancelSvg, MenuSvg } from "@/svgs";
 
 /**
  * The Header for the entire website.
@@ -81,12 +81,12 @@ export const Header: React.FC = () => {
                     className="md:hidden text-muted-foreground hover:text-primary transition-colors duration-300"
                     onClick={() => setOpen(!open)}
                 >
-                    {open ? <X size={24} /> : <Menu size={24} />}
+                    {open ? <CancelSvg className="w-5 h-5 stroke-accent fill-none" /> : <MenuSvg className="w-5 h-5 stroke-accent fill-none" />}
                 </button>
             </div>
             {
                 open && <div className="animate-fade-up bg-card border-b border-border lg:hidden">
-                    <nav className="flex flex-col justify-between gap-2 py-4">
+                    <nav className="flex flex-col justify-between gap-3 py-4">
                         {
                             memoisedLinks
                         }

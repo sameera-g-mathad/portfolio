@@ -198,9 +198,9 @@ body {
   }
 } */
 
-@utility mono {
+/* @utility mono {
   font-family: var(--font-mono);
-}
+} */
 
 @utility animate-fade-up {
   animation: var(--animate-fade-up);
