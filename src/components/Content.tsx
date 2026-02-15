@@ -7,7 +7,7 @@ import React, { memo, type PropsWithChildren } from "react";
  */
 export const Content: React.FC<PropsWithChildren> = memo(({ children }) => {
     // pt-16 as the head spans a height of 16
-    return <div className="h-screen pt-16 portfolio-width">
+    return <div className="h-screen portfolio-width">
         {children}
     </div>;
 })

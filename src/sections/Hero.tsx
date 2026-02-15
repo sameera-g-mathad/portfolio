@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col justify-center lg:py-15 py-4 lg:gap-10 gap-4 flex-2">
                 <span className="text-accent tracking-wider animate-fade-up lg:text-lg text-sm">Hi, I am</span>
                 <div className="flex flex-col gap-2 ">
-                    <div className="lg:text-8xl text-5xl font-bold capitalize text-gradient animate-fade-up stagger-1">sameer gururaj mathad.</div>
+                    <div className="lg:text-8xl text-5xl capitalize text-gradient animate-fade-up stagger-1">sameer gururaj mathad.</div>
                     <span className="lg:text-4xl text-2xl text-forground animate-fade-up stagger-2">I build things for the web & AI.</span>
                 </div>
                 <span className="lg:w-[80%] w-full lg:text-lg text-sm text-muted-foreground leading-7 animate-fade-up stagger-4">
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
                     <a
                         href="./Sameer_Gururaj_Mathad_Resume_AI_V7.pdf"
                         target='_blank'
-                        className="inline-flex capitalize tracking-wide items-center gap-2 border-2 border-primary! text-primary px-6 py-2 rounded font-mono hover:bg-primary/10 transition-all duration-300"
+                        className="inline-flex capitalize tracking-wide items-center gap-2 border-2 border-primary! text-primary px-6 py-2 rounded hover:bg-primary/10 transition-all duration-300"
                     >
                         resume
                     </a>

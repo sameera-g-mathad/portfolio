@@ -7,32 +7,39 @@ export const Skill: React.FC = () => {
             <SectionHeading sectionHeading="skills" sectionNumber="04" />
 
             <div className="flex flex-col pt-4">
-                <SkillSet
-                    title='AI & Machine Learning'
-                    items={['PyTorch', 'TensorFlow', 'LangChain', 'Hugging Face', 'RAG Pipelines', 'LoRA', 'Transformers', 'NLP']}
-                    reverse={false}
-                    width="150px"
-                />
+                <span className="animate-fade-up stagger-2">
+                    <SkillSet
+                        title='AI & Machine Learning'
+                        items={['PyTorch', 'TensorFlow', 'LangChain', 'Hugging Face', 'RAG Pipelines', 'LoRA', 'Transformers', 'NLP']}
+                        reverse={false}
+                        width="150px"
+                    />
+                </span>
+                <span className="animate-fade-up stagger-3">
+                    <SkillSet
+                        title='Full Stack & Databases'
+                        items={['React', 'TypeScript', 'Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis']}
+                        reverse={true}
+                        width="150px" />
+                </span>
 
-                <SkillSet
-                    title='Full Stack & Databases'
-                    items={['React', 'TypeScript', 'Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Redis']}
-                    reverse={true}
-                    width="150px" />
+                <span className="animate-fade-up stagger-4">
+                    <SkillSet
+                        title='DevOps & Cloud'
+                        items={['Docker', 'Kubernetes', 'AWS', 'GCP', 'GitHub Actions', 'CI/CD']}
+                        reverse={false}
+                        width="200px"
+                    />
+                </span>
 
-                <SkillSet
-                    title='DevOps & Cloud'
-                    items={['Docker', 'Kubernetes', 'AWS', 'GCP', 'GitHub Actions', 'CI/CD']}
-                    reverse={false}
-                    width="200px"
-                />
-
-                <SkillSet
-                    title='Languages'
-                    items={['Python', 'TypeScript', 'JavaScript', 'C', 'C++']}
-                    reverse={true}
-                    width="250px"
-                />
+                <span className="animate-fade-up stagger-5">
+                    <SkillSet
+                        title='Languages'
+                        items={['Python', 'TypeScript', 'JavaScript', 'C', 'C++']}
+                        reverse={true}
+                        width="250px"
+                    />
+                </span>
             </div>
         </div>
     </Content>

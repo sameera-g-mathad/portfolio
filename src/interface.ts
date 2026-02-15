@@ -36,3 +36,16 @@ export interface skillSetInterface {
   reverse: boolean;
   width: string;
 }
+
+export interface projectInterface {
+  title: string;
+  content: string;
+  skills: string[];
+  featured?: boolean;
+  live?: string;
+  githubLink: string;
+}
+
+export interface projectCardInterface {
+  project: projectInterface;
+}

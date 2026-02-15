@@ -10,6 +10,9 @@ function App() {
       <Project />
       <Skill />
       <Contact />
+      <footer className="py-8 text-center text-xm tracking-wider text-muted-foreground border-t border-border animate-fade-in portfolio-width">
+        <span>Built with 💚 by <span className="text-gradient">Sameer Gururaj Mathad</span></span>
+      </footer>
     </div>
   )
 }

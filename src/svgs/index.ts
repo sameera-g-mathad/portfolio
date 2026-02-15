@@ -6,4 +6,5 @@ export * from './GithubSvg';
 export * from './LinkedInSvg';
 export * from './LocationSvg';
 export * from './PointerSvg';
+export * from './StarSvg';
 export * from './WorkSvg';
