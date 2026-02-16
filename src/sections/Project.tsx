@@ -58,10 +58,10 @@ export const Project: React.FC = () => {
     ];
 
     return <Content>
-        <div id='projects' className="w-full h-full overflow-y-scroll">
+        <div id='projects' className="w-full h-full">
             <SectionHeading sectionHeading="projects" sectionNumber="03" />
 
-            <div className="flex flex-wrap gap-5 justify-center items-center pt-5 overflow-scroll">
+            <div className="flex h-[90%] lg:mt-0 mt-5  flex-wrap gap-5 justify-center items-center pt-5 overflow-y-scroll">
                 {projects.map((el, i) =>
                     <ProjectCard key={i} project={el} />
                 )}
