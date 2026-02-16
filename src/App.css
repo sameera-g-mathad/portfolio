@@ -1,0 +1,144 @@
+.verticalSlider,
+.horizontalSlider,
+.verticalSlider *,
+.horizontalSlider * {
+  box-sizing: border-box;
+}
+
+.verticalSlider,
+.horizontalSlider {
+  padding: 0;
+  margin: 0;
+}
+
+.verticalSlider {
+  width: var(--carousel-width);
+  height: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+.horizontalSlider {
+  width: 100%;
+  height: var(--carousel-height);
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+}
+
+/* Changed: Made .list more specific by requiring parent context */
+.horizontalSlider > .list,
+.verticalSlider > .list {
+  display: flex;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.verticalSlider > .list {
+  flex-direction: column;
+  min-height: calc(var(--carousel-height) * var(--carousel-quantity));
+}
+
+.horizontalSlider > .list > .item,
+.verticalSlider > .list > .item {
+  width: var(--carousel-width);
+  height: var(--carousel-height);
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.horizontalSlider > .list > .item {
+  animation: horizontalRun 10s linear infinite;
+  -webkit-animation: horizontalRun 10s linear infinite;
+  animation-delay: calc(
+    (-10s / var(--carousel-quantity)) * var(--position)
+  ) !important;
+}
+
+@keyframes horizontalRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--carousel-width) * -1);
+  }
+}
+
+.horizontalSlider[data-reverse='true'] > .list > .item {
+  animation: horizontalRunReverse 10s linear infinite;
+  -webkit-animation: horizontalRunReverse 10s linear infinite;
+}
+
+@keyframes horizontalRunReverse {
+  from {
+    left: calc(var(--carousel-width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.verticalSlider > .list > .item {
+  top: 100%;
+  animation: verticalRun 10s linear infinite;
+  animation-delay: calc(
+    (-10s / var(--carousel-quantity)) * var(--position)
+  ) !important;
+  -webkit-animation: verticalRun 10s linear infinite;
+}
+
+.verticalSlider[data-reverse='true'] > .list > .item {
+  top: calc(var(--carousel-height) * -1);
+  animation: verticalRunReverse 10s linear infinite;
+  -webkit-animation: verticalRunReverse 10s linear infinite;
+}
+
+@keyframes verticalRun {
+  from {
+    top: 100%;
+  }
+  to {
+    top: calc(var(--carousel-height) * -1);
+  }
+}
+
+@keyframes verticalRunReverse {
+  from {
+    top: calc(var(--carousel-height) * -1);
+  }
+  to {
+    top: 100%;
+  }
+}
+
+.horizontalSlider:hover > .list > .item,
+.verticalSlider:hover > .list > .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  opacity: 0.2;
+}
+
+.horizontalSlider > .list > .item:hover,
+.verticalSlider > .list > .item:hover {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  opacity: 1;
+  cursor: pointer;
+}
