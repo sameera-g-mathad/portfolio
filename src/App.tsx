@@ -10,7 +10,8 @@ function App() {
       <Project />
       <Skill />
       <Contact />
-      <footer className="py-8 text-center text-xm tracking-wider text-muted-foreground border-t border-border animate-fade-in portfolio-width">
+      <footer className="flex flex-col py-5 text-center text-xm tracking-wider text-muted-foreground border-t border-border animate-fade-in portfolio-width">
+        <span>© 2025 - 2026</span>
         <span>Built with 💚 by <span className="text-gradient">Sameer Gururaj Mathad</span></span>
       </footer>
     </div>

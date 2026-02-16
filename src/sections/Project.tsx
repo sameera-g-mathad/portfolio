@@ -11,7 +11,7 @@ export const Project: React.FC = () => {
             skills: ["React", "Node.js", "PostgreSQL", "LangChain", "Redis", "Docker"],
             githubLink: "https://github.com/sameera-g-mathad/parser",
             featured: true,
-            live: ''
+            live: 'https://parser.mathad.dev/'
         },
         {
             title: "English-Indic Transformer",

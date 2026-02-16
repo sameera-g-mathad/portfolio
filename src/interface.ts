@@ -49,3 +49,8 @@ export interface projectInterface {
 export interface projectCardInterface {
   project: projectInterface;
 }
+
+export interface imageInterface {
+  url: string;
+  alt: string;
+}

@@ -9,5 +9,6 @@ export * from './LinkedInSvg';
 export * from './LocationSvg';
 export * from './MenuSvg';
 export * from './PointerSvg';
+export * from './ResumeSvg';
 export * from './StarSvg';
 export * from './WorkSvg';

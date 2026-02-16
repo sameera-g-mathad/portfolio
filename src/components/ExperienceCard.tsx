@@ -28,7 +28,7 @@ export const ExperienceCard: React.FC<experienceCardInterface> = ({ title, type,
             }
         </div>
 
-        <div className="pl-4 flex flex-col gap-3">
+        <div className="pl-4 flex flex-col gap-3 flex-wrap lg: w-[90%]">
             {
                 duties?.map((el, i) => <div key={i} className="flex text items-start gap-2">
                     <span className="flex">
