@@ -19,7 +19,7 @@ export const Hero: React.FC = () => {
                 <div className="animate-fade-up stagger-5 flex flex-wrap gap-5 items-center">
                     <Badge title="Open to Work" active={true} />
                     <a
-                        href="./Sameer_Gururaj_Mathad_Resume_AI_V7.pdf"
+                        href="./Sameer_Gururaj_Mathad_Resume_AI_V8.pdf"
                         target='_blank'
                     // className="inline-flex capitalize tracking-wide items-center gap-2 border-2 border-primary! text-primary px-6 py-2 rounded hover:bg-primary/10 transition-all duration-300"
                     >
