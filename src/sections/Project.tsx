@@ -35,7 +35,7 @@ export const Project: React.FC = () => {
                 "Interactive visualization of BFS, DFS, UCS, and A* algorithms using TypeScript and HTML Canvas. Supports mazes, weighted graphs, and wall placement.",
             skills: ["TypeScript", "Canvas", "Vite"],
             githubLink: 'https://github.com/sameera-g-mathad/graph-traverser',
-            live: 'https://graph-traverser.netlify.app/'
+            live: 'https://graph-traverser.mathad.dev/'
 
         },
         {
@@ -52,7 +52,7 @@ export const Project: React.FC = () => {
                 "Conversational app with Next.js and Ollama API. IndexedDB for persistent chat history, model management UI, and online/offline status tracking.",
             skills: ["Next.js", "TypeScript", "Ollama", "IndexedDB"],
             githubLink: 'https://github.com/sameera-g-mathad/ollama_bot_react',
-            live: 'https://ollamabot.netlify.app/'
+            live: 'https://ollamabot.mathad.dev/'
 
         },
     ];
