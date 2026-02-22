@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
 
                     </a>
                     <a
-                        href="https://github.com/sameera-g-mathad"
+                        href="https://github.com/sgmathad"
                         target='_blank'
                         className="hover:-translate-y-1 transition-all duration-300 cursor-pointer">
                         <GithubSvg className="stroke-muted-foreground fill-none w-7 h-7" />
