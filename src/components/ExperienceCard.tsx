@@ -4,7 +4,7 @@ import { type experienceCardInterface } from "@/interface";
 import { Badge } from "./Badge";
 
 export const ExperienceCard: React.FC<experienceCardInterface> = ({ title, type, place, location, duration, gpa, duties }) => {
-    return <div className="flex flex-col gap-4 lg:pt-5">
+    return <div className="flex flex-col gap-4 lg:pt-2">
         <div className="flex flex-wrap items-center lg:text-xl text-sm gap-2">
             <PointerSvg className="w-6 h-6 stroke-accent fill-accent" />
             <span>{title}</span>

@@ -10,6 +10,17 @@ export const Experience: React.FC = () => {
                 <div className="flex flex-col gap-5 pt-4">
                     <span className="animate-fade-up stagger-3">
                         <ExperienceCard
+                            type='education'
+                            title="Masters in Artificial Intelligence"
+                            place="DePaul University"
+                            duration="September 2023 — June 2025"
+                            location='Chicago, IL'
+                            gpa="4.0 GPA"
+                            duties={[]}
+                        />
+                    </span>
+                    <span className="animate-fade-up stagger-4">
+                        <ExperienceCard
                             type='job'
                             title="Assistant System Engineer"
                             place="Tata Consultancy Services"
@@ -21,17 +32,6 @@ export const Experience: React.FC = () => {
                                 `Implemented Oracle MTN staff service journeys, reducing internal search and processing effort by ~25%.`,
                                 `Built and optimized Oracle SQL-driven backend integrations, reducing integration errors by ~20% across customer and staff journeys.`
                             ]} />
-                    </span>
-                    <span className="animate-fade-up stagger-4">
-                        <ExperienceCard
-                            type='education'
-                            title="Masters in Artificial Intelligence"
-                            place="DePaul University"
-                            duration="September 2023 — June 2025"
-                            location='Chicago, IL'
-                            gpa="4.0 GPA"
-                            duties={[]}
-                        />
                     </span>
                     <span className="animate-fade-up stagger-5">
                         <ExperienceCard
